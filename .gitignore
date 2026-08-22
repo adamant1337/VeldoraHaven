@@ -1,0 +1,20 @@
+# The Shopify theme is a SEPARATE, independent Git repository — never track it here.
+theme/
+
+# Secrets — never commit
+.env
+.env.*
+*.key
+
+# Non-AI-OS local source material / large binaries (not architecture)
+AuroomWellness/
+VeldoraHavenItemPictures/
+VeldoraHavenLogoPictures/
+Create Claude Agent Skill.html
+Create Claude Agent Skill_files/
+*.xlsx
+
+# OS / editor noise
+*.log
+.DS_Store
+Thumbs.db
