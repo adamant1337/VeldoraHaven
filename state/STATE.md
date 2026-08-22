@@ -1,6 +1,6 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-08-22_
+_Last updated: 2026-08-22 (R1 verified — no change)_
 
 ## Active tasks
 
@@ -25,7 +25,19 @@ _Last updated: 2026-08-22_
   captured: real design tokens + custom-source knowledge via Admin API
   outputs: shopify/LIVE-LOCAL-RECONCILIATION.md, shopify/THEME-DEV-WORKFLOW.md, theme/shopify.theme.toml
   pull: COMPLETE 2026-08-22 — v28 verified (byte-match) + committed as baseline on fix/reconcile-local-live
-  next_action: R0 complete. Await user go-ahead for R1 (typography).
+  next_action: R0 complete.
+- task_id: R1
+  title: Establish authoritative VeldoraHaven heading typography (v28)
+  status: complete — NO CHANGE REQUIRED (already satisfied)
+  finding: authoritative typography = custom-CSS layer (veldora-custom.css) — Cormorant Garamond
+    headings (Google-hosted @import, wght 200-600) + Inter body/UI, forced via !important; renders
+    consistently across homepage/collection/PDP/cart/nav/headings/buttons/editorial.
+  conflict: theme settings default to anonymous_pro/work_sans (settings_data.json has no font keys)
+    but this is fully masked by the CSS layer — latent debt, mirror of R10 color debt. No Josefin
+    remains (old conflict was stale local state, confirmed gone in v28).
+  decision: did NOT set type_heading_font via font_picker — Shopify-library Cormorant lacks the
+    200/300 ultralight brand weights and would double-load fonts atop the required Google @import.
+  change: none. no branch, no commit, no empty commit. main untouched. Shopify production untouched.
 ```
 
 ## Theme snapshot

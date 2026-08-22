@@ -54,8 +54,15 @@ restrained motion (scroll reveal, nav underline) honoring `prefers-reduced-motio
 - **Color-scheme debt (R10):** `config/settings_data.json` schemes still carry Horizon
   **defaults** — legacy **blue** primary-button border/hover `#000f9f` (12×) and old cream
   `#f7f7f5` (3×) — **masked by the `!important` CSS above**, not reflected on the storefront.
-- **Heading font at theme level is unset in v28** `settings_data.json` (Cormorant currently
-  applied only via CSS override) — R1 will set `type_heading_font` = Cormorant properly.
+- **Heading font at theme level is unset in v28** `settings_data.json` (no font overrides →
+  Horizon schema defaults `anonymous_pro_n4` heading/accent, `work_sans_n4/n5` body). Cormorant
+  is applied only via the custom-CSS `!important` layer (Google-hosted, weights 200–600).
+- **R1 VERDICT (2026-08-22): authoritative typography = the custom-CSS layer; NO change made.**
+  Do NOT set `type_heading_font` = Cormorant via font_picker: Shopify's library Cormorant lacks
+  the 200/300 ultralight weights the brand uses (hero/product-title/story), and it would double-
+  load fonts on top of the required Google `@import`. The theme-default mismatch is masked (mirror
+  of R10 color debt), not a visible inconsistency. Cormorant/Inter render consistently across
+  homepage, collection, PDP, cart, nav, headings, buttons, editorial. No Josefin remains (stale).
 
 # Agent Usage
 
