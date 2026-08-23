@@ -52,3 +52,10 @@ Date: YYYY-MM-DD · Status: accepted | superseded by ADR-XXXX
   explicit approval. Live (`205129482582`) is reference; never push/publish over it from
   local. CLI store `iqeb6u-5h.myshopify.com`; envs in `theme/shopify.theme.toml`; workflow
   in [`../shopify/THEME-DEV-WORKFLOW.md`](../shopify/THEME-DEV-WORKFLOW.md).
+- **ADR-0010** (2026-08-23, accepted): **Primary-session delegation criteria** — verified
+  by live test that AGENTS.md's model policy governs subagents only (the primary session's
+  model is user-set via `/model`, not agent-governed); the orchestrator/specialist layer is
+  opt-in each turn, not auto-triggered. Default to direct execution for single-domain work;
+  delegate via `Skill(veldorahaven-shopify-os)` → `Agent(orchestrator)` only for genuinely
+  multi-domain or Opus-tier-strategy tasks. Full record:
+  [`ADR-0010-primary-session-delegation.md`](ADR-0010-primary-session-delegation.md).

@@ -7,7 +7,10 @@ For *when/how to activate* the system, see the
 [`veldorahaven-shopify-os`](.claude/skills/veldorahaven-shopify-os/SKILL.md) skill.
 
 Agents are **project-scoped** in `.claude/agents/` (not user scope). Invoke via the
-Agent tool by name, or let `veldorahaven-orchestrator` select them.
+Agent tool by name, or let `veldorahaven-orchestrator` select them. **This roster's model
+policy governs subagents only** — the primary session decides per-turn whether to enter
+this system at all; see MASTER-ARCHITECTURE §1 and
+[ADR-0010](decisions/ADR-0010-primary-session-delegation.md).
 
 **All agents operate under CAVEMAN MODE** — the token-efficiency policy in
 [`.claude/skills/caveman/SKILL.md`](.claude/skills/caveman/SKILL.md) (ADR-0009): read less,

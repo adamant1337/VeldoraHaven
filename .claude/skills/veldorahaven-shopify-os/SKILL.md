@@ -120,6 +120,11 @@ Use this skill for VeldoraHaven Shopify/theme/Liquid/design/UX/CRO/PDP/collectio
 homepage/cart/mobile/perf/SEO/a11y/design-system/brand/agent-orchestration/
 repository/markdown/cache/context/token work. For unrelated tasks, do not activate.
 
+**Not every VeldoraHaven task needs this skill.** Single-domain, well-scoped work (a
+CSS tweak, a data fix, one metafield) is fine to do directly — see
+[ADR-0010](../../../decisions/ADR-0010-primary-session-delegation.md). Load this skill
+when the task is genuinely multi-domain or needs the orchestrated agency flow.
+
 **Operate VeldoraHaven as a coordinated AI organization — not an isolated coding
 assistant.** The best system uses the fewest agents, smallest useful context,
 least duplicated reasoning, fewest repo changes, cleanest docs, lowest tokens, and

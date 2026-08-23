@@ -19,6 +19,15 @@ skill), brand truth (see [`brand/BRAND.md`](../brand/BRAND.md)), or the design s
 
 ## 1. Agent hierarchy
 
+**Above this hierarchy sits the primary session** (the assistant actually talking to the
+user), whose own model is set only by the user via `/model` — not by anything below.
+Entering this hierarchy at all is a per-turn judgment call, not automatic: default to
+direct execution for single-domain, well-scoped work (Caveman: "can I do this myself?");
+delegate — via `Skill(veldorahaven-shopify-os)` then `Agent(veldorahaven-orchestrator)` —
+only when the task is genuinely multi-domain, needs an Opus-tier strategic call the primary
+session shouldn't make solo, or the user explicitly wants the orchestrated flow. Verified by
+live test, not assumed: see [ADR-0010](../decisions/ADR-0010-primary-session-delegation.md).
+
 Three layers coordinated by one orchestrator (roster + models: [`AGENTS.md`](../AGENTS.md)):
 
 ```
