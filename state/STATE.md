@@ -1,6 +1,6 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-08-24 — PDP-SHOWROOM-001 Phase C committed + pushed to 205414105430; NORA-IMAGE-001 + ACCESSORIES-HERO-001 complete_
+_Last updated: 2026-09-01 — Röshults partnership terms confirmed (30% trade discount), contract signing pending; theme heater-picker + size-card redesign committed_
 
 ## Active tasks
 
@@ -326,6 +326,60 @@ _Last updated: 2026-08-24 — PDP-SHOWROOM-001 Phase C committed + pushed to 205
     - P2 #11: para_count max: 3 invites ¶2 duplication with arrival section
     - P2 #7: C:\VeldoraHaven\cache\pdp-data-map.md stale
   next_action: P2 items are polish, not regressions. Address when convenient.
+- task_id: KLAVIYO-FLOWS-001
+  title: Build Klaviyo email flows (Welcome Series + Post-Purchase)
+  status: IN PROGRESS
+  copy_source: growth/email/KLAVIYO-FLOWS.md
+  flows:
+    welcome_series:
+      trigger: Subscribe to list
+      email_1: LIVE at klaviyo.com/flow/UTyBUX/edit — Brand intro (immediate)
+      email_2: NOT YET ADDED — "Which barrel sauna is right for your garden?" (3-day delay)
+        copy: growth/email/KLAVIYO-FLOWS.md → Flow 1 Email 2
+    abandoned_cart:
+      status: not started — 3 emails drafted in KLAVIYO-FLOWS.md
+    post_purchase:
+      trigger: Placed Order
+      status: NOT YET BUILT — 2 emails drafted in KLAVIYO-FLOWS.md
+        email_1: "Your VeldoraHaven order is confirmed" (immediate)
+        email_2: "How's the sauna?" — care guide + review request (21 days after order)
+  next_action: In Klaviyo — (1) add 3-day delay + Email 2 to UTyBUX Welcome flow;
+    (2) create Post-Purchase flow with Placed Order trigger + 2 emails.
+    Use copy verbatim from KLAVIYO-FLOWS.md.
+- task_id: ROSHULTS-001
+  title: Röshults outdoor furniture — products + collection + nav
+  status: WAITING — partnership terms confirmed by Röshults (2026-09-01, Niklas
+    Sahlqvist COO): 30% trade discount off retail price list, direct ordering via
+    order@roshults.com, Online Builder tool access, freight quoted per project
+    (DAP), marketing materials provided. Scope: Kitchen Island + Essentials lines,
+    plus Wood Oven and Brazier Fire pit added at our request. Contract is NOT yet
+    signed — this is the blocking step.
+  reference_quotes: 4 example configs received 2026-08-19 (valid until
+    ~2026-11-19, EXW Jönköping, EUR, 30% off): Essentials SS (#9436, €5,839.40),
+    Kitchen Island 5M Bar (#9433, €24,734.50), Essentials Beluga Black (#9434,
+    €6,119.40), Kitchen Island 4M Wall Anthracite (#9432, €21,035.00). Matching
+    Röshults Builder spec sheets (renders + dimensions) in hand for each.
+  next_action: Sign the contract with Röshults. Once signed: create products
+    (starting from the 4 example configs, cost basis = quote price after 30%
+    discount) + Röshults collection + blog article + add back to nav
+    (Outdoor Kitchens stays in nav in the meantime).
+- task_id: SEO-CONTENT-001
+  title: SEO blog + social content pipeline
+  status: IN PROGRESS
+  done:
+    - Blog: "Halo vs Luma" — live with featured image
+    - Blog: "DIY vs Pre-assembled" — live with featured image
+    - September social calendar: growth/content/SOCIAL-CALENDAR-SEP-2026.md
+        (12 IG posts, 20 Pinterest pins, 2 TikToks planned)
+  next_actions:
+    - Publish Halo vs Luma carousel to Instagram — slot Fri 2026-09-05
+    - Draft Denmark buyers guide blog article from growth/content/CONTENT-BACKLOG.md
+- task_id: REVIEWS-001
+  title: Accumulate first product reviews (prerequisite for Meta ads)
+  status: BLOCKED — 0 reviews; need ≥ 3 before Meta ads launch
+  infra: Judge.me live — auto-requesting reviews 21 days after fulfillment
+  next_action: Identify contacts who have used Auroom saunas and ask them to leave
+    a review directly on the PDPs. Do not run Meta ads until 3 reviews are live.
 - task_id: HEATER-IMAGES-001
   title: Upload HUUM/Harvia heater images + thumbnail in bundle picker/cart
   status: not started — reconnaissance only (secondary task, deliberately not
@@ -371,6 +425,48 @@ _Last updated: 2026-08-24 — PDP-SHOWROOM-001 Phase C committed + pushed to 205
     the Accessories collection concept.
 ```
 
+- task_id: PRICING-ENGINE-001
+  title: Barrel Sauna Pricing Engine — correct all 72 configurations
+  status: PHASE 1 COMPLETE (2026-08-27). Group A — 33 Black finish variants repriced,
+    all verified by independent read-back. Zero drift. Zero failures. 6 BLOCKED configs
+    remain untouched pending Auroom assembly cost confirmation.
+  stop_gate: CLEARED for Phase 1 Group A. Phase 2 (Group C unblock) requires new
+    supplier data from Silga/Auroom before any further mutations are authorized.
+  phases_complete:
+    - Phase 0A: pre-implementation audit + architecture (published artifact)
+    - Phase 0B: corrected supplier-cost matrix; uncovered tax model ambiguity
+    - Phase 0C: tax model confirmed live (ADD_TAXES_AT_CHECKOUT, ex-VAT prices);
+        Black finish commercial decision made (tiered: +€600/€800/€1,000 ex-VAT);
+        full 72-config matrix computed with correct ex-VAT GM formula.
+  key_finding_tax: Shopify variant price = ex-VAT. Phase 0B Phase had incorrect
+    incl-VAT assumption. Corrected: GM = (price − landed) / price (not price/1.25).
+    All Natural configs now 56–66% GM (not 50–65% as previously shown).
+  key_finding_black: All Black configs were priced €0–€300 above Natural despite
+    €490–€875 Auroom EXW uplift. 0 of 36 Black variants were at target.
+  decision_black: Tiered retail premium (ex-VAT):
+    - Tier 1 (EXW uplift €490–€540): +€600 — Halo Cosy 120/150, Sola 140
+    - Tier 2 (EXW uplift €590–€725): +€800 — Halo Cosy 180/225, Luma Cosy 225/260
+    - Tier 3 (EXW uplift €795–€875): +€1,000 — all Comfy, Nora, Sola 210/250
+  decision_natural: KEEP ALL — all Natural configs above 52.5% target, no changes.
+  mutation_groups:
+    - Group A (safe, 33 configs): all Black finish increases — apply in Phase 1
+    - Group B (review, 0 configs): none
+    - Group C (blocked, 6 configs): Pre-assembled for Halo Cosy 120, Nora 210,
+        Sola 250 — Auroom assembly cost absent from PDF; do not price.
+  outputs:
+    - pricing/PRICING-ENGINE-HANDOFF.md — authoritative Phase 1 handoff
+    - artifact: https://claude.ai/code/artifact/166aaa68-ddb0-4f12-82ce-606ed506ebbb
+  phase1_outputs:
+    - pricing/snapshots/snapshot-20260827-120000.json — pre-mutation snapshot (all 72 variants)
+    - pricing/PHASE-1-MUTATION-REPORT.md — permanent Phase 1 mutation report
+  next_action: Request Halo Cosy 120 / Nora 210 / Sola 250 assembly costs from
+    Silga/Auroom to unblock the 6 Group C (BLOCKED) Pre-assembled configs.
+  supplier_data_blockers:
+    - Halo Cosy 120 assembly cost: email sent to Silga 2026-08-31 — AWAITING REPLY
+    - Nora 210 assembly cost: email sent to Silga 2026-08-31 — AWAITING REPLY
+    - Sola 250 assembly cost: email sent to Silga 2026-08-31 — AWAITING REPLY
+  next_action: When Silga replies with the 3 figures, activate the 6 Group C Pre-assembled
+    variants (Halo 120 / Nora 210 / Sola 250 — Black + Natural each) and reprice.
 - task_id: AUROOM-PARTNER-001
   title: Auroom partner logo + footer partners section + /pages/partners
   status: complete (2026-08-26). All pushed to live theme 205414105430 via CLI.
