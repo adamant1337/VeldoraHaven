@@ -365,16 +365,21 @@ _Last updated: 2026-09-01 — Röshults partnership terms confirmed (30% trade d
     - Essentials Set Beluga Black + Gas Grill — €8,742 (11217676566870)
     - Kitchen Island 5M Bar SS — €35,335 (11217676599638)
     - Kitchen Island 4M Wall Anthracite — €30,050 (11217676632406)
-    Pricing = pass-through parity with Röshults' own suggested retail (sum of
-    quote unit prices pre-discount), NOT marked up further — see
-    [[veldorahaven-roshults-timeline]] memory for why the sauna 52.5% GM
-    formula doesn't apply here. Final retail markup + freight handling is an
-    open decision.
-  next_action: Sign the contract with Röshults. Before publishing: (1) decide
-    final retail pricing (parity vs. premium over Röshults direct, freight
-    bundled vs. separate), (2) add real product photography once marketing
-    materials are released, (3) write PDP copy + SEO meta + collection SEO
-    description, (4) set status ACTIVE.
+    Pricing CONFIRMED (2026-09-01): parity with Röshults' own suggested retail
+    (sum of quote unit prices pre-discount), no markup — formalized as
+    pricing/ROSHULTS-PRICING-ENGINE.md (Röshults counterpart to the sauna
+    pricing engine; different formula because the 30% trade discount off
+    Röshults' own retail IS the dealer margin, not a base to mark up further).
+    Use that file's SKU formula for any future Röshults product.
+  freight: CONFIRMED separate-at-checkout via zone-based Shopify shipping
+    profile (~3 zones by distance from Jönköping, Sweden) — BLOCKED pending
+    user's call with Niklas (Röshults COO) for real DAP freight-by-zone
+    figures. Do not build the shipping profile or invent zone rates before
+    that call — shipping profiles are live storefront-wide immediately.
+  next_action: User to speak with Niklas re: freight-by-zone. Then: (1) build
+    the shipping profile with real numbers, (2) sign the contract, (3) add
+    real product photography once marketing materials are released, (4) write
+    PDP copy + SEO meta + collection SEO description, (5) set status ACTIVE.
 - task_id: SEO-CONTENT-001
   title: SEO blog + social content pipeline
   status: IN PROGRESS
