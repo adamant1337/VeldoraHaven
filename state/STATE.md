@@ -359,10 +359,22 @@ _Last updated: 2026-09-01 — Röshults partnership terms confirmed (30% trade d
     Kitchen Island 5M Bar (#9433, €24,734.50), Essentials Beluga Black (#9434,
     €6,119.40), Kitchen Island 4M Wall Anthracite (#9432, €21,035.00). Matching
     Röshults Builder spec sheets (renders + dimensions) in hand for each.
-  next_action: Sign the contract with Röshults. Once signed: create products
-    (starting from the 4 example configs, cost basis = quote price after 30%
-    discount) + Röshults collection + blog article + add back to nav
-    (Outdoor Kitchens stays in nav in the meantime).
+  products_created: 4 DRAFT products in Shopify (2026-09-01), added to Outdoor
+    Kitchens collection, zero images, tagged pending-contract:
+    - Essentials Set SS + Charcoal Grill — €8,342 (11217676534102)
+    - Essentials Set Beluga Black + Gas Grill — €8,742 (11217676566870)
+    - Kitchen Island 5M Bar SS — €35,335 (11217676599638)
+    - Kitchen Island 4M Wall Anthracite — €30,050 (11217676632406)
+    Pricing = pass-through parity with Röshults' own suggested retail (sum of
+    quote unit prices pre-discount), NOT marked up further — see
+    [[veldorahaven-roshults-timeline]] memory for why the sauna 52.5% GM
+    formula doesn't apply here. Final retail markup + freight handling is an
+    open decision.
+  next_action: Sign the contract with Röshults. Before publishing: (1) decide
+    final retail pricing (parity vs. premium over Röshults direct, freight
+    bundled vs. separate), (2) add real product photography once marketing
+    materials are released, (3) write PDP copy + SEO meta + collection SEO
+    description, (4) set status ACTIVE.
 - task_id: SEO-CONTENT-001
   title: SEO blog + social content pipeline
   status: IN PROGRESS
