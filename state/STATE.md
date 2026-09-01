@@ -376,10 +376,44 @@ _Last updated: 2026-09-01 — Röshults partnership terms confirmed (30% trade d
     user's call with Niklas (Röshults COO) for real DAP freight-by-zone
     figures. Do not build the shipping profile or invent zone rates before
     that call — shipping profiles are live storefront-wide immediately.
-  next_action: User to speak with Niklas re: freight-by-zone. Then: (1) build
-    the shipping profile with real numbers, (2) sign the contract, (3) add
-    real product photography once marketing materials are released, (4) write
-    PDP copy + SEO meta + collection SEO description, (5) set status ACTIVE.
+  contract_status: RESOLVED — no bespoke contract exists. Röshults confirmed
+    (2026-09-01) "we don't use a unique agreement, but follow a general
+    distribution settlement" (roshults.com/distribution-terms-conditions).
+    Orders become binding on written/electronic order confirmation — no
+    signature step. `pending-contract` tag on the 4 products is stale
+    terminology; replaced by 2 real blockers below.
+  blockers:
+    - TERRITORY: standard terms limit distribution rights to "the
+      distributor's registered country" — VeldoraHaven is DK-registered.
+      UNCONFIRMED whether this restricts online sale to Danish customers
+      only. Must confirm with Niklas before selling to non-DK customers.
+    - E-COMMERCE CLAUSE: standard terms prohibit "resale through external
+      retailers, e-commerce platforms, or third-party companies... without
+      written consent." Likely aimed at marketplaces (Amazon etc.), not
+      VeldoraHaven's own Shopify store, but get explicit written confirmation
+      rather than assume.
+    - SHIPPING MODEL: standard terms describe FCA Jönköping or DAP to the
+      *distributor's* location (VeldoraHaven), not necessarily to the end
+      customer — conflicts with Niklas's earlier email implying per-order
+      drop-ship to the customer. Confirm which model applies alongside the
+      freight-by-zone question.
+  marketing_guidelines: read in full (Roshults-Marketing-Guidelines.pdf).
+    Toolbox images pre-approved/use-as-is, never edited. Own photography:
+    tidy, lavish, outdoor settings only. Logo: B/W, fixed clearance, never
+    altered. Tone: confident, laid-back, "you"/"we", no exclamation marks.
+    HARD CONSTRAINT: never present Röshults products with discount
+    communication (no %, no crossed-out price, no "deal"/"campaign" wording) —
+    confirms the parity-pricing decision in ROSHULTS-PRICING-ENGINE.md was
+    correct.
+  next_action: User to raise 3 items with Niklas in one conversation:
+    freight-by-zone rates, territory scope (DK-only vs. EU-wide), and
+    e-commerce/resale written consent. User also needs to create their own
+    builder.roshults.com account (Röshults will then enable dealer pricing).
+    Do NOT set any product ACTIVE, do NOT share on social (Niklas asked),
+    until those 3 are resolved. After that: build the shipping profile with
+    real numbers, add product photography once Ida sends assets, write PDP
+    copy + SEO meta + collection SEO description per the marketing guidelines
+    above, set status ACTIVE.
 - task_id: SEO-CONTENT-001
   title: SEO blog + social content pipeline
   status: IN PROGRESS
