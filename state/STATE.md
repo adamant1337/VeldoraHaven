@@ -1,8 +1,117 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-09-01 — Röshults partnership terms confirmed (30% trade discount), contract signing pending; theme heater-picker + size-card redesign committed_
+_Last updated: 2026-09-03 — Perplexity/Comet incident cleanup complete; two theme fixes staged and awaiting manual publish (see PERPLEXITY-INCIDENT-001 below)_
 
 ## Active tasks
+
+```yaml
+- task_id: PERPLEXITY-INCIDENT-001
+  title: Clean up after an unsupervised Perplexity/Comet agent session on the live store
+  status: MOSTLY COMPLETE — one manual step outstanding (theme publish)
+  what_happened: an autonomous Perplexity "Comet" browser agent was given access to
+    Shopify Admin outside this project's governance and made live edits on 2026-09-02:
+    published 4 blog articles (SEO buying guides), rewrote the consultation page,
+    rewrote/added copy on every collection description, edited ~20 product
+    descriptions (added a "Why buy from VeldoraHaven" footer block incl. a
+    "VAT... included" claim that contradicts the site's actual excl-VAT checkout —
+    this specific claim pre-existed in the original template, not introduced by
+    Perplexity), and drifted 21 theme files live vs git (never committed anywhere).
+    Session ran out of credits mid-task; user asked for full cleanup.
+  containment: user instructed to close the browser session / rotate Shopify admin
+    password if Comet still had access. Not verified from this session — confirm
+    with user if unsure.
+  theme_file_revert: all 21 drifted files (config/settings_data.json,
+    footer-group.json, main-collection-list.liquid, vh-brand-story.liquid,
+    vh-cart-trust.liquid, vh-footer-partners.liquid, vh-heater-picker.liquid,
+    vh-product-addons/-arrival/-materials/-spec/-story.liquid,
+    breadcrumb-json-ld.liquid, meta-tags.liquid, vh-desc-chapter/-heater-map/
+    -media-pick.liquid, templates/cart/collection/index/product.json) restored to
+    last-known-good git content (main HEAD ed05b59 at the time). Verified via
+    per-file checksum diff against git blobs, not assumed.
+  pages_unpublished: /pages/trade and /pages/consultation unpublished per explicit
+    user instruction ("perplexity crap... has to be taken away"). Both had
+    coherent, non-embarrassing content on inspection, but user wanted them gone.
+  link_cleanup_after_unpublish: every /pages/trade and /pages/consultation
+    reference site-wide was found and repointed to /pages/contact-us (the one
+    real, populated contact page — NOT /pages/contact, which is empty, see
+    known_issue below): 20 product descriptions, 8 collection descriptions, the
+    FAQ page, 5 blog articles, and the site-wide footer "Book a Consultation" nav
+    link (footer-about menu). Verified via full product/collection/page/article/
+    menu sweep, not spot-checked.
+  blog_articles_unpublished: the 4 Perplexity-authored guides unpublished
+    (Outdoor Sauna Buying Guide, Outdoor Kitchen Planning, Bioethanol Fire Pits
+    Explained; a 4th Danish guide was already draft/unpublished).
+  new_bugs_found_and_fixed_during_cleanup:
+    - vh-product-addons.liquid: add-on checkbox cards rendered with invisible
+      borders (rgba(var(--color-foreground-rgb), 0.14) — var() resolves to a
+      space-separated triplet, making the rgba() invalid, so the whole border
+      computed to nothing) and full-bleed/uncontained layout (.page-width is a
+      dead Dawn-era class Horizon doesn't define). Also fixed: keyboard-
+      unreachable checkboxes (display:none removed them from tab order), and an
+      order-accuracy bug where bfcache restore could desync the visible
+      checked-state from the actual submitted value. Root-caused against live
+      rendered DOM/CSS, not just code review — see commit 55dd41c (theme repo).
+    - Site-wide faux-bold RTE emphasis: assets/veldora-custom.css's @import
+      loads Inter at weights 300/400/500 only, but sections/vh-collection-guide.
+      liquid (and the site-wide <strong> default) requested/resolved to 600/700
+      — a face Inter doesn't ship, so browsers synthetically bolded (smeared) it.
+      This was the actual cause of the "fat/messy" text the user flagged, not a
+      simple weight preference. Fixed: capped RTE <strong>/<b> at real Inter
+      Medium (500) + an ink-density shift (--vh-stone-mid → --vh-stone) instead
+      of weight, with font-synthesis-weight:none as a durable guard against
+      future 600/700 creeping back in. Footer/hero opted out (dark-scheme
+      contrast trap, see code comment). Commit 9076704 (theme repo).
+    - Sola product PDP "Choosing your finish" card showed the wrong photo for
+      Brushed Black (a garden lifestyle shot, not the product photo) because
+      vh-media-pick's finish-card alt-text scoring matched a lifestyle image
+      whose alt text happened to contain both "Brushed" and "Black" and which
+      sits earlier in the gallery than the real product shot. Fixed by editing
+      that image's alt text via Admin API (MediaImage 64689457103190 and
+      64689457135958) to remove the ambiguous phrase — a data fix, not a code
+      fix. Worth checking other products for the same alt-text collision risk
+      if it recurs (Halo/Luma/Nora all use the same finish-card mechanism).
+    - Footer showed a redundant "Auroom Wellness" partner blurb (vh-footer-
+      partners.liquid via footer-group.json's vh_partners_fP3kx2 block) that
+      duplicated the same content already on /pages/partners. Removed the
+      section from footer-group.json per user request — Partners page
+      untouched. Commit b4a63fb (theme repo).
+  git_state: all fixes merged to `main` and pushed to GitHub
+    (github.com/adamant1337/VeldoraHaven1). Commits: ed05b59 (baseline) →
+    55dd41c (addons fix) → 9076704 (RTE fix) → b4a63fb (footer partners removal).
+  shopify_deploy_state: **NOT LIVE YET.** All revert + fix files pushed via
+    Admin API themeFilesUpsert to unpublished theme 206148993366
+    ("VeldoraHaven — pre-Perplexity revert"). The Claude Shopify connector
+    blocks writes AND publish actions on the live/MAIN theme (205638533462) as
+    a safety guard, so this last step needs a human:
+    Shopify Admin → Online Store → Themes → "VeldoraHaven — pre-Perplexity
+    revert" → Actions → Publish. Old live theme becomes unpublished (one-click
+    rollback available if anything looks wrong post-publish).
+  known_issue_not_fixed: /pages/contact (handle "contact", distinct from
+    /pages/contact-us) has an EMPTY body. Several product/collection links
+    ("Ask a question about this product") point there and currently land on a
+    blank page. Not touched this session — flagged for a follow-up.
+  draft_pending_user_review: C:\VeldoraHaven\cache\collection-copy-rewrite.md —
+    a debold/rewrite pass on 6 collection descriptions (saunas, barrel-saunas,
+    fire-features, sauna-accessories, infrared-saunas, outdoor-baths-hot-tubs),
+    drafted by the orchestrator against the CURRENT (Perplexity-era) copy in
+    C:\VeldoraHaven\cache\current-collection-copy.md. NOT pushed to Shopify —
+    needs user sign-off, and the file itself flags two unresolved factual
+    disagreements between the brand brief and live copy (Halo/Luma sizing,
+    Auroom's country of manufacture) plus a pre-existing contradiction in
+    vh-collection-guide.liquid's hardcoded comparison table.
+  also_flagged_not_actioned: two separate "Outdoor Kitchens" collections exist
+    (handles outdoor-kitchens and outdoor-kitchens-1) with different
+    descriptions — likely a duplicate from earlier work, not part of this
+    incident. Not investigated or merged.
+  next_action: (1) user publishes theme 206148993366 to go live with all fixes;
+    (2) verify the add-ons card, RTE emphasis and Sola finish-card fixes render
+    correctly on the live site post-publish; (3) user reviews and approves (or
+    edits) collection-copy-rewrite.md before it's pushed; (4) decide what to do
+    about the empty /pages/contact page; (5) confirm Perplexity/Comet no longer
+    has store access if that wasn't independently verified.
+```
+
+## Active tasks (pre-existing)
 
 ```yaml
 - task_id: AI-ARCH-001
