@@ -14,6 +14,10 @@ VeldoraHavenLogoPictures/
 Röshults/
 Brand/Images/
 Brand/Logos/
+EcoSmartFire/
+
+# Scratch working files (PDF page extraction, etc.)
+tmp/
 Create Claude Agent Skill.html
 Create Claude Agent Skill_files/
 *.xlsx
