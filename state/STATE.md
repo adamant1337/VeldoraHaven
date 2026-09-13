@@ -1,6 +1,6 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-09-13 — EcoSmart Fire "Fire Features" product gallery refresh COMPLETE. Studio shots now lead all Fire Pit and Fire Table PDPs. Blank alt text fixed on 59 images across Mojito 40 and Gin 90 series. See ECOSMARTFIRE-GALLERY-001 below._
+_Last updated: 2026-09-13 — EcoSmart Fire "Fire Features" product gallery refresh COMPLETE (all Fire Tables). Manhattan 50, Martini 50, Daiquiri 70L, Vertigo 50VL, Gin 90 Low/Chat/Bar/Dining all refreshed: plain-colour no-glass webps + bad 1200×742 primary thumbnails deleted, new 2200×1360 studio shots uploaded via staged-upload flow, reordered studio-first. See ECOSMARTFIRE-GALLERY-001 below._
 
 _Previous update: 2026-09-05 — EcoSmartFire green light received; 6 Designer Fireplace products (Mini T, Ghost, Igloo, T-Lite 3/8, Pop 3T) added to Shopify as DRAFT with MSRP pricing and images, added to Fire Features collection; 8 pre-existing EcoSmart Fire Pit DRAFT products repriced from stale ad-hoc prices down to MSRP per the confirmed pricing engine formula; outdoor-only brand rule compliance fix applied to the 6 new products' copy/images/tags (see `veldorahaven-ecosmartfire-catalog-launch` memory for full detail). See prior update below._
 
@@ -26,13 +26,23 @@ _Previous update: 2026-09-03 — Perplexity/Comet incident cleanup PUBLISHED (th
     fire_tables:
       - Ark 40: 6 new studio/install images prepended, gallery now 13 images, studio-first
       - Mojito 40: 19 blank alt texts fixed with descriptive copy
-      - Gin 90 Low: 10 blank alt texts fixed
-      - Gin 90 Chat: 10 blank alt texts fixed
-      - Gin 90 Bar: 10 blank alt texts fixed
-      - Gin 90 Dining: 10 blank alt texts fixed
-      - Manhattan 50 / Martini 50 / Daiquiri 70L / Vertigo 50VL / Mimosa 40:
-          not touched this pass (each had 7–10 existing images; Daiquiri has 18
-          studio shots locally — candidate for next gallery pass)
+      - Manhattan 50 (gid://shopify/Product/11233858162006): 3 plain no-glass webps deleted,
+          13 new studio shots uploaded (2200×1360), studio-first order
+      - Martini 50 (gid://shopify/Product/11233859734870): same — 3 deleted, 13 new studio shots
+      - Daiquiri 70L (gid://shopify/Product/11233860849046): 3 plain webps deleted, 7 images
+          uploaded (includes patio install), studio-first. Bad SS file skipped (corrupt).
+      - Vertigo 50VL (gid://shopify/Product/11233862455638): 2 indoor lifestyle images deleted
+          (brand violation), 1 patio install (2880×1700) added as hero. Studio shots skipped
+          (1100×680 — lower-res than existing store images).
+      - Gin 90 Low (gid://shopify/Product/11233900822870): 5 deleted (bad 742px primary +
+          3 plain webps + drawing), 6 new studio shots uploaded and reordered studio-first
+      - Gin 90 Chat (gid://shopify/Product/11233902199126): 5 deleted (bad 742px primary +
+          3 plain webps + drawing), 7 new studio+install shots uploaded and reordered studio-first
+      - Gin 90 Bar (gid://shopify/Product/11233903706454): 5 deleted (bad 742px primary +
+          3 plain webps + drawing), 6 new studio shots uploaded and reordered studio-first
+      - Gin 90 Dining (gid://shopify/Product/11233904492886): 4 deleted (3 plain webps +
+          drawing), 6 new studio shots uploaded and reordered studio-first
+      - Mimosa 40: not touched — no local assets found
   upload_method: stagedUploadsCreate → GCS upload (multipart POST for Batch 2a,
     pre-signed PUT for Batch 2b) → productCreateMedia with resourceUrl
   reorder_method: productReorderMedia mutation (moves array with newPosition)
