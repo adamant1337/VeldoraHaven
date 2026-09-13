@@ -5,14 +5,21 @@ theme/
 .env
 .env.*
 *.key
+.mcp.json
 
 # Non-AI-OS local source material / large binaries (not architecture)
 AuroomWellness/
 VeldoraHavenItemPictures/
 VeldoraHavenLogoPictures/
+Röshults/
+Brand/Images/
+Brand/Logos/
 Create Claude Agent Skill.html
 Create Claude Agent Skill_files/
 *.xlsx
+
+# Nested repos — tracked separately
+VeldoraHaven1/
 
 # OS / editor noise
 *.log

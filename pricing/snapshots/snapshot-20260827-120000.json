@@ -1,0 +1,766 @@
+{
+  "metadata": {
+    "timestamp": "2026-08-27T12:00:00Z",
+    "phase": "Phase 1 Group A — pre-mutation snapshot",
+    "description": "All 72 sauna variants captured before any Phase 1 mutation. 33 Group A targets marked. Sufficient for exact rollback.",
+    "currency": "EUR",
+    "tax_model": "ADD_TAXES_AT_CHECKOUT",
+    "prices_are": "ex-VAT"
+  },
+  "products": [
+    {
+      "product_id": "gid://shopify/Product/11190367125846",
+      "product_title": "Halo — Outdoor Barrel Sauna",
+      "variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448057686",
+          "variant_title": "Halo Cosy 120 — 1–2 persons / Natural Wood / DIY kit",
+          "size": "Halo Cosy 120",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "6100.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448123222",
+          "variant_title": "Halo Cosy 120 — 1–2 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Cosy 120",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "8700.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448155990",
+          "variant_title": "Halo Cosy 120 — 1–2 persons / Brushed Black / DIY kit",
+          "size": "Halo Cosy 120",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "6400.00",
+          "proposed_price": "6700.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448221526",
+          "variant_title": "Halo Cosy 120 — 1–2 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Cosy 120",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "9000.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448254294",
+          "variant_title": "Halo Cosy 150 — 2 persons / Natural Wood / DIY kit",
+          "size": "Halo Cosy 150",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448319830",
+          "variant_title": "Halo Cosy 150 — 2 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Cosy 150",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "9100.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448352598",
+          "variant_title": "Halo Cosy 150 — 2 persons / Brushed Black / DIY kit",
+          "size": "Halo Cosy 150",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "7500.00",
+          "proposed_price": "7900.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448418134",
+          "variant_title": "Halo Cosy 150 — 2 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Cosy 150",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "9300.00",
+          "proposed_price": "9700.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448450902",
+          "variant_title": "Halo Cosy 180 — 2 persons / Natural Wood / DIY kit",
+          "size": "Halo Cosy 180",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7600.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448516438",
+          "variant_title": "Halo Cosy 180 — 2 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Cosy 180",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "9400.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448549206",
+          "variant_title": "Halo Cosy 180 — 2 persons / Brushed Black / DIY kit",
+          "size": "Halo Cosy 180",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "7800.00",
+          "proposed_price": "8400.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448614742",
+          "variant_title": "Halo Cosy 180 — 2 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Cosy 180",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "9600.00",
+          "proposed_price": "10200.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448647510",
+          "variant_title": "Halo Cosy 225 — 4 persons / Natural Wood / DIY kit",
+          "size": "Halo Cosy 225",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7700.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032448713046",
+          "variant_title": "Halo Cosy 225 — 4 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Cosy 225",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "10800.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453333334",
+          "variant_title": "Halo Cosy 225 — 4 persons / Brushed Black / DIY kit",
+          "size": "Halo Cosy 225",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "7900.00",
+          "proposed_price": "8500.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453398870",
+          "variant_title": "Halo Cosy 225 — 4 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Cosy 225",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "11000.00",
+          "proposed_price": "11600.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453431638",
+          "variant_title": "Halo Comfy 225 — 4 persons / Natural Wood / DIY kit",
+          "size": "Halo Comfy 225",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "8700.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453497174",
+          "variant_title": "Halo Comfy 225 — 4 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Comfy 225",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "11000.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453529942",
+          "variant_title": "Halo Comfy 225 — 4 persons / Brushed Black / DIY kit",
+          "size": "Halo Comfy 225",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "8900.00",
+          "proposed_price": "9700.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453595478",
+          "variant_title": "Halo Comfy 225 — 4 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Comfy 225",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "11200.00",
+          "proposed_price": "12000.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453628246",
+          "variant_title": "Halo Comfy 300 — 6 persons / Natural Wood / DIY kit",
+          "size": "Halo Comfy 300",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "9400.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453693782",
+          "variant_title": "Halo Comfy 300 — 6 persons / Natural Wood / Pre-assembled",
+          "size": "Halo Comfy 300",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "11800.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453726550",
+          "variant_title": "Halo Comfy 300 — 6 persons / Brushed Black / DIY kit",
+          "size": "Halo Comfy 300",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "9600.00",
+          "proposed_price": "10400.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453792086",
+          "variant_title": "Halo Comfy 300 — 6 persons / Brushed Black / Pre-assembled",
+          "size": "Halo Comfy 300",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "12000.00",
+          "proposed_price": "12800.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453824854",
+          "variant_title": "Halo Extra Comfy — 4 persons + changing room / Natural Wood / DIY kit",
+          "size": "Halo Extra Comfy",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "10500.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453890390",
+          "variant_title": "Halo Extra Comfy — 4 persons + changing room / Natural Wood / Pre-assembled",
+          "size": "Halo Extra Comfy",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "13300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453923158",
+          "variant_title": "Halo Extra Comfy — 4 persons + changing room / Brushed Black / DIY kit",
+          "size": "Halo Extra Comfy",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "10700.00",
+          "proposed_price": "11500.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55032453988694",
+          "variant_title": "Halo Extra Comfy — 4 persons + changing room / Brushed Black / Pre-assembled",
+          "size": "Halo Extra Comfy",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "13500.00",
+          "proposed_price": "14300.00",
+          "mutation_group": "GROUP_A"
+        }
+      ]
+    },
+    {
+      "product_id": "gid://shopify/Product/11191458234710",
+      "product_title": "Luma — Outdoor Barrel Sauna with Porch",
+      "variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045777238",
+          "variant_title": "Luma Cosy 225 — up to 4 persons / Natural Wood / DIY kit",
+          "size": "Luma Cosy 225",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045810006",
+          "variant_title": "Luma Cosy 225 — up to 4 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Cosy 225",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "8800.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045842774",
+          "variant_title": "Luma Cosy 260 — up to 4 persons / Natural Wood / DIY kit",
+          "size": "Luma Cosy 260",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7900.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045875542",
+          "variant_title": "Luma Cosy 260 — up to 4 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Cosy 260",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "9400.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045908310",
+          "variant_title": "Luma Cosy 300 — up to 6 persons / Natural Wood / DIY kit",
+          "size": "Luma Cosy 300",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "8200.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045941078",
+          "variant_title": "Luma Cosy 300 — up to 6 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Cosy 300",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "9700.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040045973846",
+          "variant_title": "Luma Comfy 225 — up to 4 persons / Natural Wood / DIY kit",
+          "size": "Luma Comfy 225",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "8300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046006614",
+          "variant_title": "Luma Comfy 225 — up to 4 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Comfy 225",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "10300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046039382",
+          "variant_title": "Luma Comfy 225 — up to 4 persons / Brushed Black / DIY kit",
+          "size": "Luma Comfy 225",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "8500.00",
+          "proposed_price": "9300.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046072150",
+          "variant_title": "Luma Comfy 225 — up to 4 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Comfy 225",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "10500.00",
+          "proposed_price": "11300.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046104918",
+          "variant_title": "Luma Comfy 260 — up to 4 persons / Natural Wood / DIY kit",
+          "size": "Luma Comfy 260",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "8600.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046137686",
+          "variant_title": "Luma Comfy 260 — up to 4 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Comfy 260",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "10600.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046170454",
+          "variant_title": "Luma Comfy 260 — up to 4 persons / Brushed Black / DIY kit",
+          "size": "Luma Comfy 260",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "8800.00",
+          "proposed_price": "9600.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046203222",
+          "variant_title": "Luma Comfy 260 — up to 4 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Comfy 260",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "10800.00",
+          "proposed_price": "11600.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046235990",
+          "variant_title": "Luma Comfy 300 — up to 6 persons / Natural Wood / DIY kit",
+          "size": "Luma Comfy 300",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "10200.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046268758",
+          "variant_title": "Luma Comfy 300 — up to 6 persons / Natural Wood / Pre-assembled",
+          "size": "Luma Comfy 300",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "12200.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046301526",
+          "variant_title": "Luma Comfy 300 — up to 6 persons / Brushed Black / DIY kit",
+          "size": "Luma Comfy 300",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "10400.00",
+          "proposed_price": "11200.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55040046334294",
+          "variant_title": "Luma Comfy 300 — up to 6 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Comfy 300",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "12400.00",
+          "proposed_price": "13200.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042157838678",
+          "variant_title": "Luma Cosy 225 — up to 4 persons / Brushed Black / DIY kit",
+          "size": "Luma Cosy 225",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "7500.00",
+          "proposed_price": "8100.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042157904214",
+          "variant_title": "Luma Cosy 225 — up to 4 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Cosy 225",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "9000.00",
+          "proposed_price": "9600.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042157969750",
+          "variant_title": "Luma Cosy 260 — up to 4 persons / Brushed Black / DIY kit",
+          "size": "Luma Cosy 260",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "8100.00",
+          "proposed_price": "8700.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042158035286",
+          "variant_title": "Luma Cosy 260 — up to 4 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Cosy 260",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "9600.00",
+          "proposed_price": "10200.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042158100822",
+          "variant_title": "Luma Cosy 300 — up to 6 persons / Brushed Black / DIY kit",
+          "size": "Luma Cosy 300",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "8400.00",
+          "proposed_price": "9200.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55042158166358",
+          "variant_title": "Luma Cosy 300 — up to 6 persons / Brushed Black / Pre-assembled",
+          "size": "Luma Cosy 300",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "10000.00",
+          "proposed_price": "10700.00",
+          "mutation_group": "GROUP_A"
+        }
+      ]
+    },
+    {
+      "product_id": "gid://shopify/Product/11159107862870",
+      "product_title": "Nora — Outdoor Square Barrel Sauna",
+      "variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233816406",
+          "variant_title": "Nora 210 — up to 6 persons / Natural Wood / DIY kit",
+          "size": "Nora 210",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "9000.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233849174",
+          "variant_title": "Nora 210 — up to 6 persons / Natural Wood / Pre-assembled",
+          "size": "Nora 210",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "10500.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233881942",
+          "variant_title": "Nora 210 — up to 6 persons / Brushed Black / DIY kit",
+          "size": "Nora 210",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "9000.00",
+          "proposed_price": "10000.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233914710",
+          "variant_title": "Nora 210 — up to 6 persons / Brushed Black / Pre-assembled",
+          "size": "Nora 210",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "10500.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233947478",
+          "variant_title": "Nora 250 — up to 6 persons / Natural Wood / DIY kit",
+          "size": "Nora 250",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "10000.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072233980246",
+          "variant_title": "Nora 250 — up to 6 persons / Natural Wood / Pre-assembled",
+          "size": "Nora 250",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "12000.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072234013014",
+          "variant_title": "Nora 250 — up to 6 persons / Brushed Black / DIY kit",
+          "size": "Nora 250",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "10000.00",
+          "proposed_price": "11000.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072234045782",
+          "variant_title": "Nora 250 — up to 6 persons / Brushed Black / Pre-assembled",
+          "size": "Nora 250",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "12000.00",
+          "proposed_price": "13000.00",
+          "mutation_group": "GROUP_A"
+        }
+      ]
+    },
+    {
+      "product_id": "gid://shopify/Product/11198241407318",
+      "product_title": "Sola — Square Barrel Sauna",
+      "variants": [
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072257933654",
+          "variant_title": "Sola 140 — 1–2 persons / Natural Wood / DIY kit",
+          "size": "Sola 140",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "7200.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072257966422",
+          "variant_title": "Sola 140 — 1–2 persons / Natural Wood / Pre-assembled",
+          "size": "Sola 140",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "8300.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072257999190",
+          "variant_title": "Sola 140 — 1–2 persons / Brushed Black / DIY kit",
+          "size": "Sola 140",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "7200.00",
+          "proposed_price": "7800.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258031958",
+          "variant_title": "Sola 140 — 1–2 persons / Brushed Black / Pre-assembled",
+          "size": "Sola 140",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "8300.00",
+          "proposed_price": "8900.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258064726",
+          "variant_title": "Sola 210 — up to 6 persons / Natural Wood / DIY kit",
+          "size": "Sola 210",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "9400.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258097494",
+          "variant_title": "Sola 210 — up to 6 persons / Natural Wood / Pre-assembled",
+          "size": "Sola 210",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "11100.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258130262",
+          "variant_title": "Sola 210 — up to 6 persons / Brushed Black / DIY kit",
+          "size": "Sola 210",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "9400.00",
+          "proposed_price": "10400.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258163030",
+          "variant_title": "Sola 210 — up to 6 persons / Brushed Black / Pre-assembled",
+          "size": "Sola 210",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "11100.00",
+          "proposed_price": "12100.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258195798",
+          "variant_title": "Sola 250 — up to 8 persons / Natural Wood / DIY kit",
+          "size": "Sola 250",
+          "finish": "Natural Wood",
+          "delivery": "DIY kit",
+          "current_price": "9800.00",
+          "proposed_price": null,
+          "mutation_group": "KEEP"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258228566",
+          "variant_title": "Sola 250 — up to 8 persons / Natural Wood / Pre-assembled",
+          "size": "Sola 250",
+          "finish": "Natural Wood",
+          "delivery": "Pre-assembled",
+          "current_price": "11500.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258261334",
+          "variant_title": "Sola 250 — up to 8 persons / Brushed Black / DIY kit",
+          "size": "Sola 250",
+          "finish": "Brushed Black",
+          "delivery": "DIY kit",
+          "current_price": "9800.00",
+          "proposed_price": "10800.00",
+          "mutation_group": "GROUP_A"
+        },
+        {
+          "variant_id": "gid://shopify/ProductVariant/55072258294102",
+          "variant_title": "Sola 250 — up to 8 persons / Brushed Black / Pre-assembled",
+          "size": "Sola 250",
+          "finish": "Brushed Black",
+          "delivery": "Pre-assembled",
+          "current_price": "11500.00",
+          "proposed_price": null,
+          "mutation_group": "BLOCKED"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_variants_captured": 72,
+    "group_a_targets": 33,
+    "keep": 27,
+    "blocked": 6,
+    "group_b": 0,
+    "drift_detected": 0,
+    "all_live_prices_match_phase0c_baseline": true
+  },
+  "rollback_instructions": "To restore any variant to its pre-Phase-1 price, use productVariantsBulkUpdate with the variant_id and current_price from this snapshot. The snapshot was validated against live Shopify data immediately before mutation. No price reconstruction from formulas is needed or authorized."
+}

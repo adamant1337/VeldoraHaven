@@ -38,7 +38,7 @@ Intentional? Works on mobile? Stays performant?
 ## 2. THE AGENT ROSTER
 
 Do not create generic + VeldoraHaven duplicates of a role. One orchestrator +
-15 specialists live in `.claude/agents/`.
+15 specialists live in `.Codex/agents/`.
 
 **Authoritative roster (name, model, domain, owned paths, dependencies):**
 [`AGENTS.md`](../../../AGENTS.md). **Deep system design:**
