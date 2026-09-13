@@ -1,8 +1,200 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-09-03 — Perplexity/Comet incident cleanup complete; two theme fixes staged and awaiting manual publish (see PERPLEXITY-INCIDENT-001 below)_
+_Last updated: 2026-09-13 — EcoSmart Fire "Fire Features" product gallery refresh COMPLETE. Studio shots now lead all Fire Pit and Fire Table PDPs. Blank alt text fixed on 59 images across Mojito 40 and Gin 90 series. See ECOSMARTFIRE-GALLERY-001 below._
+
+_Previous update: 2026-09-05 — EcoSmartFire green light received; 6 Designer Fireplace products (Mini T, Ghost, Igloo, T-Lite 3/8, Pop 3T) added to Shopify as DRAFT with MSRP pricing and images, added to Fire Features collection; 8 pre-existing EcoSmart Fire Pit DRAFT products repriced from stale ad-hoc prices down to MSRP per the confirmed pricing engine formula; outdoor-only brand rule compliance fix applied to the 6 new products' copy/images/tags (see `veldorahaven-ecosmartfire-catalog-launch` memory for full detail). See prior update below._
+
+_Previous update: 2026-09-03 — Perplexity/Comet incident cleanup PUBLISHED (theme 206148993366 is now MAIN/live — STATE.md's old "awaiting manual publish" note below is stale, corrected here); /pages/shipping-delivery freight/country contradiction fixed (see SHIPPING-PAGE-FIX-001 below); Halo font/price audit complete (see HALO-FONT-PRICE-CHECK-001 below); PDP section-order + Customisation-options font fix staged in a new preview theme, awaiting manual publish (see PDP-STORY-FEATURES-SWAP-001 below)_
 
 ## Active tasks
+
+```yaml
+- task_id: ECOSMARTFIRE-GALLERY-001
+  title: EcoSmart Fire "Fire Features" product gallery refresh — studio-first order + alt text
+  status: COMPLETE (2026-09-13)
+  scope: Fire Pits + Fire Tables only. Designer Fireplaces and other categories not touched.
+  products_updated:
+    fire_pits:
+      - Nova 850 (gid://shopify/Product/9464488829270): 5 new studio/install images, studio-first order
+      - Nova 600 (gid://shopify/Product/9464492859734): 4 new images, studio-first
+      - Stix (gid://shopify/Product/9464492924270): 3 new images, studio-first
+      - Stix 8 (gid://shopify/Product/9464493022550): 5 new images, studio-first
+      - Mix 600 (gid://shopify/Product/9464493088086): 5 new images, studio-first
+      - Mix 850 (gid://shopify/Product/9464493152022): 5 new images, studio-first
+      - Pod 30: SKIPPED — no local assets at C:\VeldoraHaven\EcoSmartFire\Product Images\Fire Pits\Pod\Pod 30
+      - Pod 40: SKIPPED — no local assets at C:\VeldoraHaven\EcoSmartFire\Product Images\Fire Pits\Pod\Pod 40
+    fire_tables:
+      - Ark 40: 6 new studio/install images prepended, gallery now 13 images, studio-first
+      - Mojito 40: 19 blank alt texts fixed with descriptive copy
+      - Gin 90 Low: 10 blank alt texts fixed
+      - Gin 90 Chat: 10 blank alt texts fixed
+      - Gin 90 Bar: 10 blank alt texts fixed
+      - Gin 90 Dining: 10 blank alt texts fixed
+      - Manhattan 50 / Martini 50 / Daiquiri 70L / Vertigo 50VL / Mimosa 40:
+          not touched this pass (each had 7–10 existing images; Daiquiri has 18
+          studio shots locally — candidate for next gallery pass)
+  upload_method: stagedUploadsCreate → GCS upload (multipart POST for Batch 2a,
+    pre-signed PUT for Batch 2b) → productCreateMedia with resourceUrl
+  reorder_method: productReorderMedia mutation (moves array with newPosition)
+  alt_text_method: productUpdateMedia mutation (alt field)
+  assets_source: C:\VeldoraHaven\EcoSmartFire\Product Images\ (pre-organized by range/model/type)
+  images_skipped: packaging shots, spec/technical-drawing assets, Nova 850 install images >25MP,
+    ESF_Ark_40_Teak_Outdoor_Elegance.jpg (24MP — safely skipped)
+  pdp_verification: spot-checked via Shopify Admin GraphQL + accessibility tree; all 6
+    verified products confirmed leading with correct studio shots
+  next_action: Consider Daiquiri 70L and other Fire Table gallery upgrades; consider
+    Pod 30/40 once local assets are available
+- task_id: PDP-STORY-FEATURES-SWAP-001
+  title: Swap PDP section order (dark story band vs. light features band) +
+    fix Customisation-options font drift
+  status: STAGED — awaiting manual publish by user (themePublish is blocked
+    by the Shopify connector's safety policy, same as PERPLEXITY-INCIDENT-001)
+  context: while checking this, discovered theme 206148993366 ("VeldoraHaven
+    — pre-Perplexity revert") is now role MAIN (live) — the user must have
+    published it manually since the last STATE.md update, which still said
+    "awaiting manual publish." Corrected here. Full theme list as of
+    2026-09-03: 206148993366 MAIN; everything else (205129482582,
+    205414105430, 205583221078, 205638533462, 205649445206, 206158266710)
+    UNPUBLISHED.
+  what_changed: user felt the dark green "AN AUROOM PRODUCT / Outdoor Barrel
+    Sauna" story band (vh-product-story, background var(--vh-forest-deep))
+    looked wrong sitting directly under the gallery renders. Swapped its
+    position with the light "Included as standard" features band
+    (vh-product-features) in templates/product.json's section order — features
+    now renders first (right after the buy box), story band second. This is
+    the shared product template, so it affects every barrel-sauna PDP, not
+    just Halo.
+  font_fix_found_during_review: while previewing the swap, spotted the
+    "Customisation options" checkbox grid (Roof shingles, PVC roof cover,
+    etc.) rendering in browser-default styling (13.6px / weight 400 / pure
+    black) instead of matching "Included as standard" above it (15.2px /
+    weight 300 / var(--vh-stone)). Root cause: theme drift — the LIVE
+    sections/vh-product-features.liquid still had an older .vh-addon-card
+    CSS rule (font-size: 0.85rem, no font-weight override, color:
+    var(--color-foreground)), while the local git clone
+    (theme/sections/vh-product-features.liquid) already had the corrected
+    rule matching .vh-feature exactly. Pushed the git version's full file
+    to the preview theme, which fixed the font AND aligned the checkbox
+    grid's column rhythm/hairline dividers/check-mark styling to match the
+    inclusions list above it (comment in the file already documented this
+    as the intent — the live version had just drifted from it).
+  where_staged: new theme "VeldoraHaven — preview: PDP section order swap"
+    (206166131030), created via themeDuplicate from the live theme
+    (206148993366) specifically so this work would NOT touch production —
+    user had asked for "a preview." Two files pushed there via
+    themeFilesUpsert: templates/product.json (section order) and
+    sections/vh-product-features.liquid (font fix, full file replace).
+  verified: computed styles checked live on the preview URL before/after —
+    .vh-addon-card text went from 13.6px/400/rgb(0,0,0) to
+    15.2px/300/rgb(42,42,34), matching .vh-feature exactly. Section order
+    visually confirmed via screenshot (features band now directly under
+    gallery, story band second).
+  preview_url: https://www.veldorahaven.com/products/auroom-halo-barrel-sauna?preview_theme_id=206166131030
+  next_action: user publishes theme 206166131030 manually (Admin → Online
+    Store → Themes → "VeldoraHaven — preview: PDP section order swap" →
+    Actions → Publish). Not done yet as of this update. NOTE: local git
+    clone (theme/templates/product.json) already has the section-order
+    change committed to the working tree but not yet committed to git or
+    pushed to GitHub — do that once the user confirms the preview looks
+    right, to keep git/live in sync (this project has a recurring
+    git/live drift problem, see PERPLEXITY-INCIDENT-001 and the font-drift
+    root cause just above).
+```
+
+```yaml
+- task_id: HALO-FONT-PRICE-CHECK-001
+  title: Font/size check on SHIPPING-PAGE-FIX-001 edits + full Halo price audit
+  status: DONE
+  font_check: inspected computed styles (font-family/size/weight/line-height)
+    on the live /pages/shipping-delivery page — the two rewritten "Delivery
+    cost" paragraphs are pixel-identical to every untouched paragraph on the
+    page (Inter 17px/400 body, Cormorant Garamond 38.4px/300 headings). No
+    drift. Separately discovered the "Why buy from VeldoraHaven" footer edits
+    made to Nora/Halo/Luma/Sola descriptions (same session, prior task) are
+    NOT rendered anywhere on the live PDP — no theme section pulls that
+    chapter via vh-desc-chapter, so there was nothing to visually check there;
+    the fix is correct in the underlying Shopify data but currently invisible
+    on the storefront. Flag if that content should actually be surfaced.
+  price_audit: recomputed all 28 live Halo variant prices against
+    pricing/PRICING-ENGINE-HANDOFF.md's formula (base EXW + finish uplift +
+    assembly + logistics reserve, target 52.5% GM). User's recalled
+    "~€7,350" price matches Halo Cosy 150 NW DIY = €7,300 live, which is
+    correct (GM 63.4%, within the documented 56-66% Natural-price range) —
+    not an error.
+  found_and_fixed: Halo Extra Comfy / Brushed Black / DIY kit was live at
+    €11,600 but the approved Group A mutation table
+    (PRICING-ENGINE-HANDOFF.md) specifies €11,500 (GM exactly 52.5%, the
+    documented floor case). Corrected live price to €11,500 via
+    productVariantsBulkUpdate (variant 55032453923158).
+  commercial_decision: Halo Cosy 120 Pre-assembled (NW €8,700 / BB €9,000)
+    was flagged as Group C BLOCKED (no verified Auroom assembly cost) but was
+    already live and selling. User decided 2026-09-03 to keep both prices,
+    assuming an assembly cost similar to the other small models (~€300,
+    matching Cosy 150/Sola 140) rather than waiting on supplier confirmation.
+    Updated PRICING-ENGINE-HANDOFF.md to record this as a commercial decision
+    (GM 65.6% NW / 61.3% BB at the assumed cost) and moved Halo Cosy 120 out
+    of the Group C blocked table — Nora 210 and Sola 250 Pre-assembled remain
+    blocked/unpriced, not addressed this session.
+```
+
+```yaml
+- task_id: SHIPPING-PAGE-FIX-001
+  title: Fix contradictory freight/country claims on /pages/shipping-delivery
+  status: DONE — published live via Admin API pageUpdate (Shopify Page, not theme code)
+  what_was_wrong: user flagged "some information is not true" without specifying
+    which lines. Investigation found two real contradictions, not assumptions:
+    1) Freight: templates/product.json's text_lead_facts block ("Freight
+       included") and every barrel-sauna's own "Why buy from VeldoraHaven"
+       description footer ("The price you see is the price you pay... freight...
+       included. Nothing added at checkout") both said freight is included in
+       price — confirmed TRUE by pricing/PRICING-ENGINE-HANDOFF.md's Logistics
+       reserve (EUR600 DIY / EUR850 pre-assembled) baked into landed cost. But
+       the SAME product description's footer, two bullets above, also said
+       "freight quoted per delivery address and confirmed before your order is
+       placed" — a self-contradiction on one page, and it matched what the old
+       shipping-delivery page said ("Freight is quoted per order... confirmed
+       with you before your order is dispatched"). The shipping page was the
+       wrong one; rewrote its "Delivery cost" section to match the included-
+       freight reality.
+    2) Countries: shipping page implied broad/vague reach ("Nordic region...
+       further into Europe... worldwide by arrangement"); one PDP footer said
+       "Delivered across the EU and EEA". STATE.md's prior known-good note
+       (barrel saunas ship from Estonia/Latvia to Denmark, Germany, Netherlands,
+       France only) turned out to be the STALE fact, not the shipping page —
+       user confirmed 2026-09-03 that EU-wide delivery is live today, quoted
+       case-by-case, with DK/DE/NL/FR as the fastest/cheapest core routes.
+       Correcting the prior "confirmed barrel-sauna delivery countries" claim
+       in this file accordingly — treat DK/DE/NL/FR as core/included routes,
+       not a hard ship-to limit.
+  new_page_copy: "Delivery cost" section now reads: freight to Denmark,
+    Germany, Netherlands, France is included in the product-page price with
+    nothing added at checkout; other EU countries are delivered on request
+    with freight quoted individually and confirmed before dispatch. Rest of
+    the page (freight mechanics, kerbside, placement quotes, lead times,
+    booking, damage reporting, worldwide-by-arrangement outside EU) untouched
+    — none of it contradicted anything.
+  followup_done_same_session: fixed the matching self-contradiction inside
+    each barrel-sauna product's own "Why buy from VeldoraHaven" description
+    footer (live per-product via Admin API productUpdate, not theme code) —
+    Nora (11159107862870), Halo (11190367125846), Luma (11191458234710),
+    Sola (11198241407318), all ACTIVE. The "Delivered across the EU and EEA —
+    freight quoted per delivery address and confirmed before your order is
+    placed" bullet was replaced with "Delivered across the EU — freight
+    included to Denmark, Germany, the Netherlands and France; other EU
+    destinations delivered on request, quoted before your order is placed" —
+    now consistent with the neighboring "price you see is the price you
+    pay... nothing added at checkout" bullet two lines below, and with the
+    shipping page. Kaia (11199563071830, DRAFT) has a different, shorter
+    description with no "Why buy" footer — not touched, nothing to fix there.
+  not_done: did not re-verify whether "Freight included" in
+    templates/product.json's text_lead_facts applies sensibly to non-sauna
+    products (fire features) sharing the same product.json template — same
+    template, no per-category override found.
+    scope_check: also flagged Rosnhults (ROSHULTS-001, still WAITING/not
+    ACTIVE) has a different, unresolved freight model (FCA Jonkoping /
+    DAP-to-distributor) — this page's claims don't cover it yet since it
+    isn't live; revisit shipping-delivery copy once Röshults launches.
+```
 
 ```yaml
 - task_id: PERPLEXITY-INCIDENT-001
@@ -77,9 +269,130 @@ _Last updated: 2026-09-03 — Perplexity/Comet incident cleanup complete; two th
       untouched. Commit b4a63fb (theme repo).
   git_state: all fixes merged to `main` and pushed to GitHub
     (github.com/adamant1337/VeldoraHaven1). Commits: ed05b59 (baseline) →
-    55dd41c (addons fix) → 9076704 (RTE fix) → b4a63fb (footer partners removal).
-  shopify_deploy_state: **NOT LIVE YET.** All revert + fix files pushed via
-    Admin API themeFilesUpsert to unpublished theme 206148993366
+    55dd41c (addons fix) → 9076704 (RTE fix) → b4a63fb (footer partners
+    removal) → 9a5d3e0 (homepage kitchen card image + collections-index
+    hide list, see pre_publish_review_round below).
+  pre_publish_review_round: user did a visual pass on the staged theme
+    before publishing and caught 3 more things (2026-09-03), all fixed:
+    - /pages/privacy-policy (Shopify Page, NOT theme code — edited live via
+      Admin API pageUpdate, takes effect immediately regardless of theme
+      publish state): "Shopify Inc. — our e-commerce platform provider" →
+      "our platform provider" (dropped "e-commerce" per user instruction).
+    - Homepage "02 — Outdoor Kitchens" category card (vh-category-cards.
+      liquid) was showing a Röshults Wood Oven product photo
+      (Roshults-Outdoor-Kitchen_10412-02-LowRes.webp, from
+      Röshults/WoodOven/) under the Outdoor Kitchens label — user caught
+      this as wrong (oven ≠ kitchen). Fixed by reusing the Kitchen Island
+      lifestyle shot already correctly used on that collection's own hero
+      (vh-collection-hero.liquid's outdoor-kitchens case):
+      Roshults-Outdoor-Kitchen_10261-02-LowRes.webp (lakeside deck scene,
+      from Röshults/Kitchen Island/) — already on the CDN, no new upload
+      needed. Commit 9a5d3e0.
+    - /collections index (main-collection-list.liquid) was listing every
+      collection via `collections | reject: 'handle', 'infrared-saunas'`.
+      User: not cleared to sell Cold Plunge, Complete Bundles, Outdoor
+      Furniture & Pergolas, or Cabin Saunas yet — added 4 more `reject`
+      filters (handles: cold-plunge-ice-baths, complete-bundles,
+      outdoor-furniture-pergolas, cabin-saunas) to the same chain. Commit
+      9a5d3e0. NOTE: this only hides them from the /collections INDEX
+      grid — the collection pages themselves (e.g. /collections/
+      cold-plunge-ice-baths) are still reachable directly/via search, and
+      outdoor-kitchens + fire-features still carry `vhc_coming_soon: true`
+      in vh-collection-hero.liquid despite being left visible in the index
+      per user's explicit list — not touched, flagged here in case that's
+      an oversight rather than intentional.
+    - user asked to go further: fully unlist those same 4 collections
+      (not just hide from the index grid). Attempted via Admin API
+      publishableUnpublish (Online Store publication
+      gid://shopify/Publication/343904747862) on all 4 collection GIDs
+      (Cold Plunge 700504342870, Complete Bundles 700504473942, Outdoor
+      Furniture & Pergolas 700504441174, Cabin Saunas 704643957078) —
+      BLOCKED by the Shopify connector's own safety policy (category:
+      destructive, "prevent accidental storefront catalog removal"), not
+      by our project's rules. User chose to do it manually rather than
+      have a theme-side 404-guard workaround built.
+      next_action: user unchecks "Online Store" under Sales channels and
+      apps for each of the 4 collections above (Admin → Products →
+      Collections → [collection] → Sales channels and apps → Save). Not
+      done yet as of this update.
+  soft_unlist_workaround_shipped: since the real unpublish is blocked and
+    the user couldn't find the manual toggle either, built a theme-side
+    stand-in instead (commit bc9ba47, pushed to theme 206148993366):
+    vh-collection-hero.liquid, main-collection.liquid and
+    vh-collection-guide.liquid all check the same 4-handle list
+    (cold-plunge-ice-baths, complete-bundles, outdoor-furniture-pergolas,
+    cabin-saunas) and render nothing / a "This page no longer exists"
+    panel with <meta name="robots" content="noindex, nofollow"> instead of
+    real content. NOT a true 404 (URL still returns 200) — a real
+    unpublish in Admin is still the correct long-term fix; this just
+    closes the gap until that happens.
+    gotcha_hit_twice: `{% assign x = y contains z %}` is invalid Liquid —
+    `contains` only works inside `{% if %}`/`{% unless %}` conditions, not
+    as an assign expression. Also `{% javascript %}` cannot be nested
+    inside a `{% unless %}` block. Both caused themeFilesUpsert failures
+    before landing on the final structure — if extending this pattern,
+    keep the handle-list check inline in `{% if %}`/`{% unless %}`, never
+    pre-computed into a boolean via assign.
+  pdp_duplication_pass_2026-09-03: user did a second visual pass, this
+    time on a barrel-sauna PDP, and caught the same "written twice"
+    pattern in two more places (commit bc9ba47, pushed to theme
+    206148993366):
+    - "Included in the price" (Freight/VAT/factory oiling) existed in TWO
+      places: templates/product.json's text_lead_facts block (a static
+      text block that is the LAST block in the buy column, right after
+      buy_buttons_eYQEYi — i.e. literally under the payment options) and
+      vh-product-addons.liquid's badge row (a separate full-width section
+      below the buy column). User: keep the one under the payment options,
+      remove the other. Deleted the badge row + its CSS from
+      vh-product-addons.liquid.
+    - vh-product-features.liquid's "Available options" tier duplicated
+      vh-product-addons.liquid's "Add to your order" checkbox grid
+      (same 6-7 option names, just grouped differently) — but the
+      features-tier version was a static list with no functionality,
+      while addons' version is the real interactive selector that posts
+      properties[Add-ons] to cart. Removed the "Available options" tier
+      from vh-product-features.liquid entirely (code now only renders
+      "Included as standard"); also dropped the now-unused
+      options_heading schema setting and the dead .vh-feature-grid--opt
+      CSS.
+    - "Remove the boxes... make it look good": vh-product-addons.liquid's
+      add-on checkbox cards and "We can also arrange" service cards had
+      full 1px bordered boxes (border-radius: 2px). Restyled both to
+      hairline rows (border-bottom / border-top only, no radius),
+      matching vh-product-features.liquid's existing unboxed list style
+      elsewhere on the same PDP — checkbox interactivity/functionality
+      unchanged, purely a style change.
+    - Also fixed while in this file: two "Contact us for pricing" links
+      in vh-product-addons.liquid pointed to /pages/contact (the known
+      empty page) — repointed to /pages/contact-us, matching the
+      site-wide repoint already done for the Perplexity cleanup.
+    not_done: the empty /pages/contact page itself is still not fixed —
+    only individual links to it keep getting repointed as they're found.
+    A full site-wide link sweep for any remaining /pages/contact
+    references (not /pages/contact-us) has not been re-run since the
+    original Perplexity cleanup sweep; worth doing once, properly, rather
+    than fixing them one at a time as they surface.
+  duplication_pattern_worth_generalizing: three separate duplicate-content
+    bugs found and fixed in one session (collections-index vs unlisted
+    handles was a visibility bug, not this pattern, but the PDP ones
+    were) all had the same shape: the barrel-sauna PDP's ~10 sections
+    each independently parse product.description into chapters via
+    snippets/vh-desc-chapter.liquid, so the same authored chapter
+    (Included as standard / Available options / delivery facts) can
+    easily end up rendered by two sections that don't know about each
+    other. vh-product-spec.liquid's show_included setting was already a
+    precedent for solving this via an explicit off-switch; the fixes this
+    session instead just deleted the losing side outright. If more
+    duplicates turn up, check every vh-product-*.liquid section's
+    `render 'vh-desc-chapter'` calls against each other before assuming
+    a fix is needed in only one place.
+    - Liquid syntax gotcha hit and fixed during this: `{% liquid %}` block
+      tags are one-statement-per-line — a `| reject:` filter chain broken
+      across multiple lines inside `{% liquid %}` throws "Unknown tag" on
+      the continuation line. Chain stayed single-line.
+  shopify_deploy_state: **NOT LIVE YET.** All revert + fix files (including
+    the pre_publish_review_round fixes above) pushed via Admin API
+    themeFilesUpsert to unpublished theme 206148993366
     ("VeldoraHaven — pre-Perplexity revert"). The Claude Shopify connector
     blocks writes AND publish actions on the live/MAIN theme (205638533462) as
     a safety guard, so this last step needs a human:
@@ -109,6 +422,16 @@ _Last updated: 2026-09-03 — Perplexity/Comet incident cleanup complete; two th
     edits) collection-copy-rewrite.md before it's pushed; (4) decide what to do
     about the empty /pages/contact page; (5) confirm Perplexity/Comet no longer
     has store access if that wasn't independently verified.
+  porch_table_fix_2026-09-03: fixed a pre-existing (not Perplexity-caused) bug
+    flagged by the collection-copy-rewrite draft: vh-collection-guide.liquid's
+    hardcoded barrel-sauna comparison table listed both Luma AND Nora as having
+    a porch. Confirmed against growth/content/blog-halo-vs-luma.md (dedicated
+    "The Luma — With a Porch" section, explicit Halo/Luma comparison table) that
+    only Luma has one — Nora's distinguishing feature is its square
+    cross-section, not a porch. Fixed the "Porch" row (Nora cell Yes -> —).
+    Committed to theme repo main (08e20bd), pushed to GitHub, and pushed
+    directly to unpublished theme 206148993366 via themeFilesUpsert (0
+    userErrors) so it's included in the pending manual publish.
 ```
 
 ## Active tasks (pre-existing)

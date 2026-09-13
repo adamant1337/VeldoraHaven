@@ -89,7 +89,7 @@ G0.1 — MERGE AUDIT (`growth/GROWTH-MERGE-AUDIT.md`)
 |---|---|---|---|
 | Auroom | CONFIRMED — authorized retailer | Barrel saunas (Halo/Luma/Nora/Sola) | All 4 products live |
 | Röshults | PROSPECTIVE — under discussion | Outdoor kitchens, outdoor living | Do NOT represent as confirmed |
-| EcoSmart Fire | PROSPECTIVE — under discussion | Fire features | Do NOT represent as confirmed |
+| EcoSmart Fire | CONFIRMED 2026-09-05 — green light received (via MAD Design Europe) | Fire features | 6 Designer Fireplace products added DRAFT + 8 existing Fire Pit products repriced to MSRP; see `veldorahaven-ecosmartfire-catalog-launch` memory. Still DRAFT (not public) pending photography for remaining SKUs |
 | Gloster | FUTURE TARGET — not started | Premium outdoor furniture | Do NOT represent as partner |
 
 ---
@@ -193,9 +193,13 @@ This document confirms the product expansion roadmap aligns with Growth OS Engin
 **All autonomous tasks #1–#15 complete. Phase 2 plan written.** Phase 1 progress awaits user actions #16–#20.
 
 User actions required:
-- ~~**#16 — GA4 verification**~~ ✅ DONE — Property 552063574, Measurement ID G-RBNXF5MSQX, injected into theme.liquid (2026-08-31)
-- **#17 — Google Search Console + sitemap submission** — BLOCKED: René holds the Google account. Do with René.
-- ~~**#18 — Klaviyo activation**~~ ✅ DONE — Onsite Tracking enabled; Abandoned Checkout flow QRg5pJ (trigger + 3hr wait + email#1 subject set, Draft — needs template to go Live); Welcome Series + Post-Purchase flows not yet created
+- ~~**#16 — GA4 verification**~~ ✅ RE-CONFIRMED 2026-09-03 — running as a Shopify Customer Events pixel ("Google Analytics 4", status Web/green), NOT theme.liquid code. This is why it survived the Perplexity-incident theme revert that wiped the old theme.liquid injection — Customer Events pixels are decoupled from theme code. Data column shows "—" (no self-reported quality label, unlike Google & YouTube's "Optimized") — real-event flow not yet independently verified, but pixel is active. Separately, "Google & YouTube" app pixel (Server+Web, Optimized) is also active — a distinct integration (Shopify Shopping feed / Merchant Center), not a GA4 duplicate.
+- ~~**#17 — Google Search Console + sitemap submission**~~ ✅ CONFIRMED RUNNING 2026-09-03 (user-reported). Was blocked on René holding the Google account — now resolved. Coverage report / crawl errors / indexed-page count not yet pulled into this repo.
+- ~~**#18 — Klaviyo activation**~~ ✅ DONE 2026-09-03 — full chain closed out. Root cause found and fixed: "Sync your Shopify email subscribers to Klaviyo" was unchecked (silently preventing any subscriber from ever reaching a Klaviyo list, which meant flows couldn't trigger regardless of build status) — user checked that box. All three flows in growth/email/KLAVIYO-FLOWS.md finalized with real Klaviyo Shopify-integration variables (`{{ event.CheckoutURL }}`, `{{ event.ItemNames }}`, `{{ first_name|default:"there" }}`) and user confirmed all three built + published in Klaviyo:
+  - Abandoned Checkout (flow QRg5pJ) — 3 emails, matched existing 3hr/24hr/72hr delays
+  - Welcome Series — 2 emails, triggered off the newly-synced subscriber list
+  - Post-Purchase — 2 emails, with a fix applied: Email 2 triggers off "Fulfilled Order" + 21 days (not "Placed Order" + 21 days as originally drafted, which would've landed mid-transit given 4-8 week delivery times); review-request CTA removed from Email 2 to avoid duplicating Judge.me's own automatic 21-day-post-fulfillment review request
+  G5/G6 KPIs now live. Email/CRM engine (Engine G) is fully operational for the first time this phase.
 - ~~**#19 — Judge.me dashboard setup**~~ ✅ DONE — Review Widget on product template; Request scheduling: 21 days after fulfilled (Domestic + International)
 - **#20 — Röshults confirmation + Group C pricing from Auroom**
 

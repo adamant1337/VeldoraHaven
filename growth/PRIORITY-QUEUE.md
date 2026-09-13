@@ -340,9 +340,9 @@ These tasks cannot be completed autonomously. They are listed in priority order.
 | 13 | SEO descriptions for 5 collections | C | ✓ Yes | MEDIUM |
 | 14 | Build /pages/consultation | B | ✓ Yes | HIGH |
 | 15 | Meta/Pinterest creative brief | F/D | ✓ Yes | MEDIUM |
-| 16 | Verify GA4 | F/All | ⚠ USER | CRITICAL |
-| 17 | Verify GSC + submit sitemap | C | ⚠ USER | HIGH |
-| 18 | Activate Klaviyo + email capture | G | ⚠ USER | HIGH |
+| 16 | Verify GA4 | F/All | ✅ DONE 2026-09-03 | CRITICAL |
+| 17 | Verify GSC + submit sitemap | C | ✅ DONE 2026-09-03 | HIGH |
+| 18 | Activate Klaviyo + email capture | G | ✅ DONE 2026-09-03 | HIGH |
 | 19 | Configure Judge.me dashboard | B | ⚠ USER | HIGH |
 | 20 | Confirm Röshults + Group C pricing | A | ⚠ USER | MEDIUM |
 

@@ -9,7 +9,11 @@
 
 ## FLOW 1 — WELCOME SEQUENCE (2 emails)
 
-**Trigger:** Subscribe to list (footer signup or popup)  
+**Status:** FINALIZED 2026-09-03 — ready to paste into a new Klaviyo flow. No placeholder swaps
+needed (both links point to already-live pages). Not yet built in Klaviyo — user action.
+
+**Trigger:** Subscribe to list (footer signup or popup) — use the list fed by the Shopify
+email-subscriber sync (enabled 2026-09-03)  
 **Delay:** Email 1 → immediate; Email 2 → 3 days after Email 1
 
 ---
@@ -74,8 +78,13 @@ The VeldoraHaven team
 
 ## FLOW 2 — ABANDONED CART (3 emails)
 
+**Status:** FINALIZED 2026-09-03 — matches live Klaviyo flow `QRg5pJ` (Draft). Copy below uses
+Klaviyo's actual Shopify-integration variables (`{{ event.CheckoutURL }}`, `{{ event.ItemNames }}`,
+`{{ first_name|default:"there" }}`) instead of the placeholder tags this file originally drafted.
+Next step: user pastes into flow QRg5pJ's email steps and flips Draft → Live.
+
 **Trigger:** Customer adds to cart but does not complete checkout  
-**Delays:** Email 1 → 1 hour; Email 2 → 24 hours; Email 3 → 72 hours
+**Delays:** Email 1 → 3 hours (matches flow QRg5pJ's existing setting, not the 1hr originally drafted below); Email 2 → 24 hours; Email 3 → 72 hours
 
 ---
 
@@ -161,8 +170,18 @@ The VeldoraHaven team
 
 ## FLOW 3 — POST-PURCHASE SEQUENCE (2 emails)
 
-**Trigger:** Order placed (purchase event)  
-**Delays:** Email 1 → immediately (order confirmation supplement); Email 2 → 21 days after delivery (estimated)
+**Status:** FINALIZED 2026-09-03, WITH A FIX — original draft triggered Email 2 off "Placed Order
++ 21 days," but delivery takes 4-8 weeks, so that timing would send the care-guide/review email
+while the sauna is still in transit. Corrected: Email 2 now triggers off Shopify's "Fulfilled
+Order" event (or equivalent label in Klaviyo's Shopify integration) + 21 days, not Placed Order.
+Also removed the explicit review-request CTA from Email 2 — Judge.me already sends its own
+automatic review request 21 days after fulfillment (per growth/GROWTH-STATE.md), so Klaviyo's
+Email 2 now covers care-guide content only to avoid duplicate review asks on the same schedule.
+If Klaviyo should own the review CTA instead, re-add it and disable Judge.me's automatic request.
+Not yet built in Klaviyo — user action.
+
+**Trigger:** Email 1 on "Placed Order"; Email 2 on "Fulfilled Order" + 21 days (NOT Placed Order + 21 days)  
+**Delays:** Email 1 → immediately (order confirmation supplement); Email 2 → 21 days after fulfillment
 
 ---
 

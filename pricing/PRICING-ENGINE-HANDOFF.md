@@ -209,19 +209,26 @@ All Black finish increases. Supplier costs verified. Margins ≥ 52.5% target. N
 ### GROUP B — Manual commercial review
 None. All pricing decisions resolved by tiered system.
 
-### GROUP C — Blocked (6 configurations)
+### GROUP C — Blocked (4 configurations remaining; Halo Cosy 120 unblocked 2026-09-03)
 Missing Auroom assembly cost. Do not price until supplier confirms.
 
 | Model | Finish | Delivery | Blocker |
 |---|---|---|---|
-| Halo Cosy 120 | NW | Pre | No assembly cost in Auroom PDF |
-| Halo Cosy 120 | BB | Pre | No assembly cost in Auroom PDF |
 | Nora 210 | NW | Pre | No assembly cost in Auroom PDF |
 | Nora 210 | BB | Pre | No assembly cost in Auroom PDF |
 | Sola 250 | NW | Pre | No assembly cost in Auroom PDF |
 | Sola 250 | BB | Pre | No assembly cost in Auroom PDF |
 
-**Action required:** Request assembly pricing for Halo Cosy 120, Nora 210, Sola 250 from Silga/Auroom.
+**Action required:** Request assembly pricing for Nora 210, Sola 250 from Silga/Auroom.
+
+**Halo Cosy 120 Pre-assembled — unblocked 2026-09-03 (commercial decision, not a supplier confirmation):**
+user reviewed the live prices (NW Pre €8,700, BB Pre €9,000 — both already live and selling) and
+decided to keep them, assuming an assembly cost in line with the other small models (Cosy 150
+€300, Cosy 180 €320, Sola 140 €300) rather than waiting on the Auroom PDF figure. Using an
+assumed €300 assembly cost: NW Pre landed = 1,840 + 300 + 850 = €2,990 → GM 65.6% at €8,700;
+BB Pre landed = 1,840 + 490 + 300 + 850 = €3,480 → GM 61.3% at €9,000. Both comfortably above
+the 52.5% target. Treat €300 as a working assumption, not a verified Auroom cost — replace with
+the real figure if/when Silga/Auroom confirms it, same as Nora 210 and Sola 250 above.
 
 ---
 
