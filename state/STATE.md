@@ -1,6 +1,6 @@
 # VeldoraHaven — Live State
 
-_Last updated: 2026-09-13 — EcoSmart Fire "Fire Features" product gallery refresh COMPLETE (all Fire Tables). Manhattan 50, Martini 50, Daiquiri 70L, Vertigo 50VL, Gin 90 Low/Chat/Bar/Dining all refreshed: plain-colour no-glass webps + bad 1200×742 primary thumbnails deleted, new 2200×1360 studio shots uploaded via staged-upload flow, reordered studio-first. See ECOSMARTFIRE-GALLERY-001 below._
+_Last updated: 2026-09-13 — Nav fix: Outdoor Kitchens collection handle renamed from `outdoor-kitchens-1` → `outdoor-kitchens` to match live nav links (dead link resolved). EcoSmart Fire "Fire Features" product gallery refresh COMPLETE (all Fire Tables). Manhattan 50, Martini 50, Daiquiri 70L, Vertigo 50VL, Gin 90 Low/Chat/Bar/Dining all refreshed: plain-colour no-glass webps + bad 1200×742 primary thumbnails deleted, new 2200×1360 studio shots uploaded via staged-upload flow, reordered studio-first. See ECOSMARTFIRE-GALLERY-001 below._
 
 _Previous update: 2026-09-05 — EcoSmartFire green light received; 6 Designer Fireplace products (Mini T, Ghost, Igloo, T-Lite 3/8, Pop 3T) added to Shopify as DRAFT with MSRP pricing and images, added to Fire Features collection; 8 pre-existing EcoSmart Fire Pit DRAFT products repriced from stale ad-hoc prices down to MSRP per the confirmed pricing engine formula; outdoor-only brand rule compliance fix applied to the 6 new products' copy/images/tags (see `veldorahaven-ecosmartfire-catalog-launch` memory for full detail). See prior update below._
 
